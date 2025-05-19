@@ -33,7 +33,7 @@ Focusmate/
 │ │ └── main.js # Main script file
 │ │ └── theme.js # Dark theme toggle logic
 │ │ └── timer.js # Timer logic
-│ └── sounds/ # Sound effects (click.mp3, play.mp3, pause.mp3, timer.mp3)
+│ └── sounds/ # Sound effects
 ├── .env # Environment variables for email credentials
 ├── .gitignore
 ├── README.md # You're here!
@@ -46,6 +46,11 @@ Focusmate/
 ```bash
 git clone https://github.com/your-username/Focusmate.git
 cd Focusmate
+```
+
+### 2. Install Dependencies
+```
+pip install -r requirements.txt
 ```
 
 ### 3. Set Up Environment Variables
