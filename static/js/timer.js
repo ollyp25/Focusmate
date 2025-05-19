@@ -50,6 +50,7 @@ export function initTimer() {
       minutes.textContent = String(currentMinutes).padStart(2, '0');
       seconds.textContent = String(currentSeconds).padStart(2, '0');
       sessionText.textContent = isFocusSession ? 'Time to focus!' : 'Take a break!';
+      document.title = `${String(currentMinutes).padStart(2, '0')}:${String(currentSeconds).padStart(2, '0')} - ${String(sessionText.textContent)}`;
     }
 
     // Saves the current focus and break times to localStorage
@@ -130,7 +131,7 @@ export function initTimer() {
       const breakTimeValue = document.querySelector('.break-time-value');
     
       focusTimeValue.textContent = focusMinutes;
-      breakTimeValue.textContent = breakMinutes;
+      breakTimeValue.textContent = breakMinutes;    
     }
 
     // Helper to add click listeners on time change buttons
