@@ -2,6 +2,8 @@
 
 Focusmate is a simple, elegant Pomodoro-style timer web app built with Flask. It helps users alternate between focused work sessions and short breaks. The app also includes a contact form that sends messages via email using SMTP.
 
+🔗 **Live Demo:** [https://focusmate-6ton.onrender.com](https://focusmate-6ton.onrender.com)
+
 ## 🧠 Features
 
 - ⏳ Adjustable focus and break sessions
