@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="contact-container">
+
+    {% if msg_sent %}
+    <div class="custom-alert">
+        <strong>Success!</strong> Your message has been sent.
+        <button class="close-alert" aria-label="Close" onclick="this.parentElement.style.display='none';">&times;</button>
+    </div>
+    {% endif %}
+
+
+    <div class="contact-form">
+        <span class="container">
+            <h1>✏️<b> Get in touch</b></h1>
+            <p>Have feedback or a question? Drop us a message — we’ll get back to you soon.</p>
+        </span>
+        <form method="POST" action="{{ url_for('contact') }}">
+            <div>
+                <label for="fullNameInput" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullNameInput" name="name" placeholder="John Doe">
+            </div>
+            <div>
+                <label for="emailInput" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailInput" name="email" placeholder="name@example.com">
+            </div>
+            <div>
+                <label for="messageInput" class="form-label">Message</label>
+                <textarea class="form-control" id="messageInput" rows="5" name="message"></textarea>
+            </div>
+            <button id="contactSubmit" type="submit" class="btn btn-primary mb-3"><span>Submit</span></button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

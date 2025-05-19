@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Focusmate</title>
+</head>
+
+<body data-theme="light">
+    <div class="container-main">
+
+        <!-- NAV BAR -->
+        <header class="top-row">
+            <span>
+                <a href="{{ url_for('home') }}"><i class="bi bi-clock-history fs-2"></i> Focusmate</a>
+            </span>
+            <div class="navigation">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeCheckbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <div class="middle-row">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bottom-row">
+            <div class="footer-links">
+                <a href="{{ url_for('home') }}" aria-label="Home page">Home</a>
+                <a href="{{ url_for('about') }}" aria-label="About page">About</a>
+                <a href="{{ url_for('faq') }}" aria-label="FAQs">FAQs</a>
+                <a href="{{ url_for('contact') }}" aria-label="Contact page">Contact</a>
+            </div>
+            <div class="copyright">
+                © {{ year }} Focusmate. Made with ☕ + ⏱
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>

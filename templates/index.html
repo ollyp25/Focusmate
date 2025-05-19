@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- TIMER CARD -->
+<div class="timer-card">
+    <div class="session" id="sessionText">Time to focus!</div>
+    <div class="timer">
+        <div>
+            <span id="minutes">25</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+    </div>
+    <div class="timer-buttons">
+        <button aria-label="Start or pause timer" id="playButton"><i class="bi bi-play-fill"></i></button>
+        <button aria-label="Reset timer" id="resetButton"><i class="bi bi-arrow-counterclockwise"></i></button>
+    </div>
+    <div class="timer-settings">
+        <div class="focus-session">
+            <p>Focus Session</p>
+            <div class="controls">
+                <button class="plus-focus" aria-label="Increase focus session length"><i class="bi bi-plus-lg"></i></button>
+                <span class="focus-time-value">25</span>
+                <button class="minus-focus" aria-label="Decrease focus session length"><i class="bi bi-dash-lg"></i></button>
+            </div>
+        </div>
+        <div class="break-session">
+            <p>Break Session</p>
+            <div class="controls">
+                <button class="plus-break" aria-label="Increase break session length"><i class="bi bi-plus-lg"></i></button>
+                <span class="break-time-value">5</span>
+                <button class="minus-break" aria-label="Decrease break session length"><i class="bi bi-dash-lg"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

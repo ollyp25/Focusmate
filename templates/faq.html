@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="faq-container">
+    <h1>❓ <b>Frequently Asked Questions</b></h1>
+    <p class="faq-intro">Got questions? We've got answers. Here are some of the most common questions about Focusmate and how to make the most of your focus time.</p>
+
+    <div class="faq-item">
+        <h3>💡 What is the Pomodoro Technique?</h3>
+        <p>The Pomodoro Technique is a time management method that encourages short bursts of focused work (usually 25 minutes) followed by short breaks (typically 5 minutes).</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>⏱ How do I start the timer?</h3>
+        <p>Click the play button ▶ to begin your session. The timer will automatically switch between focus and break sessions based on your settings.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>⚙️ Can I change the focus or break durations?</h3>
+        <p>Yes! Use the + and - buttons under "Focus Session" and "Break Session" to increase or decrease the time before starting your session.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>🌙 How do I enable dark mode?</h3>
+        <p>Toggle the switch in the top right corner to activate dark mode. This can help reduce eye strain, especially when working at night.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>📬 Is there a way to contact you?</h3>
+        <p>Of course! Head over to our <a href="{{ url_for('contact') }}">Contact</a> page and send us a message. We’d love to hear your feedback, suggestions, or questions.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>🔒 Is my data stored anywhere?</h3>
+        <p>Nope. Focusmate is a simple productivity tool and doesn’t collect or store your session data. It’s all local and private.</p>
+    </div>
+</div>
+
+{% endblock %}
